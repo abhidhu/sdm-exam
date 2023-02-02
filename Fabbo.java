@@ -21,9 +21,30 @@ public class Fabbo{
         // for(int i=0; i<n; i++)
         //  System.out.println(fabbo(i));
         
-        for(int i=1; i<=n;i++){
-            if(isPrime(i)) System.out.println(i);
-        }
+        // for(int i=1; i<=n;i++){
+        //     if(isPrime(i)) System.out.println(i);
+        // }
 
+
+        for(int i=1; i<=n; i++)
+            if(isAmstrong(i))   System.out.println(i);
+
+    }
+
+    static boolean isAmstrong(int n) {
+
+        int temp=n;
+        int ans=0;
+        while(temp >0){
+            ans+=temp%10;
+            temp/=10;
+            ans*=10;
+        }
+        ans/=10;
+        if(ans==n)  return true;
+        
+
+
+        return false;
     }
 }
